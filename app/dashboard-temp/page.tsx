@@ -10,6 +10,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import SensorAlerts from "@/components/SensorAlerts";
 
 interface Reading {
   time: string;
@@ -69,6 +70,8 @@ export default function DashboardTemp() {
       <h1 className="text-2xl font-semibold mb-6">
         Графік температурного сенсора
       </h1>
+
+      <SensorAlerts path="temperature-sensors" />
 
       <div className="bg-gray-900 p-6 rounded-2xl shadow-md border border-gray-800">
         <h2 className="text-lg font-medium mb-4">Sensor A</h2>

@@ -10,6 +10,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import SensorAlerts from "@/components/SensorAlerts";
 
 interface Reading {
   time: string;
@@ -77,6 +78,8 @@ export default function DashboardHumidity() {
   return (
     <div className="p-6">
       <h1 className="text-2xl font-semibold mb-6">Графік давача вологості</h1>
+
+      <SensorAlerts path="humidity-sensors" />
 
       <div className="bg-gray-900 p-6 rounded-2xl shadow-md border border-gray-800">
         <div className="flex justify-between items-center mb-4">
